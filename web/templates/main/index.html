@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}	
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+<div class="header">
+	<span class="title">
+		SMART CCTV<br>
+	</span>
+	<span class="desc">
+		Control Panel
+	</span>
+</div>
+<label class="power">
+	<input id="power-sw" type="checkbox">
+	
+	<div id="sw-container">
+		<svg id="power-icon" viewBox="0 0 44 44">
+			<path d="M22,6 C31,6 38,13 38,22 C38,31 31,38 22,38 C13,38 6,31 6,22 C6,13 13,6 22,6 L22,28" id="path"></path>
+		</svg>
+	</div>
+</label>
+<div class="grid-container">
+	<div class="box1 grid-box">
+		<div class="left-3">
+			<span class="material-icons-outlined icon-big">
+				notifications_active
+			</span>
+		</div>
+		<div class="right-6 parent"> 
+			<div class="vetical-center">
+				<span class="bold">
+					이벤트 목록<br>
+				</span>
+				<span class="desc">
+					SMART CCTV에서 잡힌 모션 이벤트들을 확인합니다.
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="box2 grid-box parent">
+		<div class="vetical-center center">
+			<span class="material-icons-outlined icon-middle">
+				videocam
+			</span>
+			<br>
+			<span class="bold-small">
+				실시간 스트리밍
+			</span>
+		</div>
+	</div>
+	<div class="box3 grid-box parent">
+		<div class="vetical-center center">
+			<span class="material-icons-outlined icon-middle">
+				settings
+			</span>
+			<br>
+			<span class="bold-small">
+				설 정
+			</span>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	<span id="copyright">
+		Copyright 2021. Heebeom Yang all rights reserved
+	</span>
+</div>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/events.css' %}">
+
+<div class="header">
+	<span class="title">
+		SMART CCTV<br>
+	</span>
+	<span class="desc">
+		Event List
+	</span>
+</div>
+
+<div id="list-container" class="grid-box">
+		
+	<div id="date-container">
+		<span id="date-icon" class="material-icons">
+			date_range
+		</span>
+		<input id="input-date"/>
+	</div>
+
+	<div id="event-list">
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item">
+				<span class="bold-small">Motion Event #254</span><br>
+				<span class="desc">2021년 11월 30일 15:11:32</span>
+			</li>
+			<li class="list-group-item">
+				<span class="bold-small">Motion Event #253</span><br>
+				<span class="desc">2021년 11월 30일 14:00:31</span>
+			</li>
+			<li class="list-group-item">
+				<span class="bold-small">Motion Event #252</span><br>
+				<span class="desc">2021년 11월 30일 09:48:58</span>
+			</li>
+			<li class="list-group-item">
+				<span class="bold-small">Motion Event #251</span><br>
+				<span class="desc">2021년 11월 29일 23:15:28</span>
+			</li>
+			<li class="list-group-item">
+				<span class="bold-small">Motion Event #250</span><br>
+				<span class="desc">2021년 11월 29일 18:51:05</span>
+			</li>
+			<li class="list-group-item">
+				<span class="bold-small">Motion Event #249</span><br>
+				<span class="desc">2021년 11월 26일 07:00:31</span>
+			</li>
+			
+		</ul>
+	</div>
+</div>
+
+<script>
+	$('#input-date').datepicker({
+		format: 'yyyy년 mm월 dd일'
+	});
+
+	var today = $('#input-date').datepicker('getDate', true);
+
+	$('#input-date').val(today);
+
+</script>
+{% endblock %}

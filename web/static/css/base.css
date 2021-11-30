@@ -1,0 +1,94 @@
+
+@font-face {
+    font-family: 'Nexon';
+    src: url('/static/font/NEXON\ Lv1\ Gothic\ OTF.otf') format('woff');
+}
+
+
+@font-face {
+    font-family: 'NexonB';
+    src: url('/static/font/NEXON\ Lv1\ Gothic\ OTF\ Bold.otf') format('woff');
+}
+
+body {
+	/* font-family: Nexon; */
+	
+	color: #9393b9;
+	font-family: Nexon;
+	background-color: #F6F8FC;
+}
+
+.header {
+	width:100%;
+	height:auto;
+	padding:50px 40px;
+}
+
+.title {
+	font-family: NexonB;
+	font-size:21px;
+	color: #5153ad;
+}
+
+.desc {
+	font-size:14px;
+	color: #9393b9;
+	
+}
+
+.footer {
+	width:100%;
+	position:absolute;
+	text-align: center;
+	bottom: 0px;
+	padding:20px;
+}
+
+#copyright {
+	font-family: Nexon;
+	font-size:13px;
+	color: #c2c2d1;
+
+}
+
+
+.parent {
+	display:table;
+}
+
+.vetical-center {
+	display:table-cell;
+	vertical-align: middle;
+}
+
+.center {
+	display: table-cell;
+	text-align: center;
+}
+
+.bold {
+	color: #6e67db;
+	font-family:NexonB;
+	font-size:21px;
+}
+
+.bold-small {
+	color: #6e67db;
+	font-family:NexonB;
+	font-size:16px;
+}
+
+
+.grid-box {
+	position: relative;
+	background-color: white;
+	border-radius: 20px;
+	padding:20px;
+	-webkit-filter: drop-shadow(0 2px 4px rgba(146, 146, 146, 0.3));
+	filter: drop-shadow(0 2px 4px rgba(170, 170, 170, 0.3));
+}
+
+.grid-box:hover {
+	-webkit-filter: drop-shadow(0 4px 8px rgba(146, 146, 146, 0.3));
+	filter: drop-shadow(0 4px 8px rgba(170, 170, 170, 0.3));
+}

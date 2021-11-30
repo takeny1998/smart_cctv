@@ -1,0 +1,37 @@
+
+#list-container {
+	width:85%;
+	height:70vh;
+	margin:auto;
+}
+
+#event-list {
+	margin-top:20px;
+	height:90%;
+	overflow: scroll;
+}
+
+
+
+#date-container {
+	position: relative;
+}
+
+#date-icon {
+	position:absolute;
+    top: 6px;
+    left: 12px;
+	color: #5153ad;
+	z-index:300;
+}
+
+#input-date {
+	padding:7px 20px;
+	border:0;
+	border-radius:20px;
+	text-align:right;
+	background-color: #F6F8FC;
+	color:#5153ad;
+	width:200px;
+	
+}
