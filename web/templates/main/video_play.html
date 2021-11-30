@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+	video {
+		margin-top:40px;
+		width:100%;
+		height:auto;
+	}
+</style>
+<div class="header">
+	<span class="title">
+		SMART CCTV<br>
+	</span>
+	<span class="desc">
+		Video Play
+	</span>
+</div>
+
+<div class="grid-box container">
+	<span class="bold">Motion Event #{{ event.id }}</span><br>
+	<span class="desc">{{ event.datetime |date:"Y년 m월 d일 H:i:s"}}</span>
+	<video controls>
+	<source src="{{ event.video.url }}" type="video/mp4">
+	</video>
+</div>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+	img {
+		width:100%;
+		height:auto;
+		object-fit: cover;
+	}
+
+	.control-btn {
+		position: absolute;
+		display: table;
+		z-index: 9999;
+		background-color: white;
+		width:64px;
+		height:64px;
+		border-radius: 50%;
+		-webkit-filter: drop-shadow(0 2px 4px rgba(146, 146, 146, 0.3));
+		filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+	}
+
+	.control-btn:hover {
+		-webkit-filter: drop-shadow(0 2px 4px rgba(146, 146, 146, 0.3));
+		filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.8));
+	}
+	.ctrl-icon {
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+		font-size:48px;
+	}
+
+	#ctrl-left {
+		left:50px;
+		top:50%;
+		transform: translate(0, -50%);
+	}
+
+	#ctrl-right {
+		right:50px;
+		top:50%;
+		transform: translate(0, -50%);
+	}
+
+	#ctrl-up  {
+		top:20px;
+		left:50%;
+		transform: translate(-50%, 0);
+	}
+
+	#ctrl-down {
+		bottom:20px;
+		left:50%;
+		transform: translate(-50%, 0);
+	}
+</style>
+<div id="ctrl-left" class="control-btn">
+	<span class="material-icons-outlined ctrl-icon">
+		keyboard_arrow_left
+	</span>
+</div>
+
+<div id="ctrl-right" class="control-btn">
+	<span class="material-icons-outlined ctrl-icon">
+		keyboard_arrow_right
+	</span>
+</div>
+
+<div id="ctrl-up" class="control-btn">
+	<span class="material-icons-outlined ctrl-icon">
+		keyboard_arrow_up
+	</span>
+</div>
+
+<div id="ctrl-down" class="control-btn">
+	<span class="material-icons-outlined ctrl-icon">
+		keyboard_arrow_down
+	</span>
+</div>
+
+<img src="{% static 'image/room.jpg' %}" />
+
+{% endblock %}

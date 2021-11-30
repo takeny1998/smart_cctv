@@ -12,7 +12,7 @@
 	</span>
 </div>
 
-<div id="list-container" class="grid-box">
+<div class="grid-box container">
 		
 	<div id="date-container">
 		<span id="date-icon" class="material-icons">
@@ -23,31 +23,12 @@
 
 	<div id="event-list">
 		<ul class="list-group list-group-flush">
-			<li class="list-group-item">
-				<span class="bold-small">Motion Event #254</span><br>
-				<span class="desc">2021년 11월 30일 15:11:32</span>
+			{% for event in events %}
+			<li class="list-group-item" onclick="location.href = '{% url 'main:play' event.id %}'">
+				<span class="bold-small">Motion Event #{{ event.id }}</span><br>
+				<span class="desc">{{ event.datetime |date:"Y년 m월 d일 H:i:s"}}</span>
 			</li>
-			<li class="list-group-item">
-				<span class="bold-small">Motion Event #253</span><br>
-				<span class="desc">2021년 11월 30일 14:00:31</span>
-			</li>
-			<li class="list-group-item">
-				<span class="bold-small">Motion Event #252</span><br>
-				<span class="desc">2021년 11월 30일 09:48:58</span>
-			</li>
-			<li class="list-group-item">
-				<span class="bold-small">Motion Event #251</span><br>
-				<span class="desc">2021년 11월 29일 23:15:28</span>
-			</li>
-			<li class="list-group-item">
-				<span class="bold-small">Motion Event #250</span><br>
-				<span class="desc">2021년 11월 29일 18:51:05</span>
-			</li>
-			<li class="list-group-item">
-				<span class="bold-small">Motion Event #249</span><br>
-				<span class="desc">2021년 11월 26일 07:00:31</span>
-			</li>
-			
+			{% endfor %}
 		</ul>
 	</div>
 </div>
